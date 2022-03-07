@@ -1,2 +1,5 @@
 require('plugins')
+require('lualine-setup')
+require('gitsigns-setup')
+require('cmp-setup')
 require('settings')
