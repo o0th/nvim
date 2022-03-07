@@ -40,4 +40,7 @@ require('packer').startup(function()
     'saadparwaiz1/cmp_luasnip',
     'onsails/lspkind-nvim'
   }
+
+  -- Javascript
+  use { 'pangloss/vim-javascript' }
 end)
