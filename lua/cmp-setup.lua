@@ -78,3 +78,61 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 require('lspconfig')['eslint'].setup {
   capabilities = capabilities
 }
+
+require('lspconfig')['tsserver'].setup {
+  capabilities = capabilities
+}
+
+local lspkind = require('lspkind')
+cmp.setup {
+  formatting = {
+    fields = { "kind", "abbr", "menu" },
+    kind_icons = {
+      Class = " ",
+      Color = " ",
+      Constant = "ﲀ ",
+      Constructor = " ",
+      Enum = "練",
+      EnumMember = " ",
+      Event = " ",
+      Field = " ",
+      File = "",
+      Folder = " ",
+      Function = " ",
+      Interface = "ﰮ ",
+      Keyword = " ",
+      Method = " ",
+      Module = " ",
+      Operator = "",
+      Property = " ",
+      Reference = " ",
+      Snippet = " ",
+      Struct = " ",
+      Text = " ",
+      TypeParameter = " ",
+      Unit = "塞",
+      Value = " ",
+      Variable = " ",
+    },
+    source_names = {
+      nvim_lsp = "(LSP)",
+      emoji = "(Emoji)",
+      path = "(Path)",
+      calc = "(Calc)",
+      cmp_tabnine = "(Tabnine)",
+      vsnip = "(Snippet)",
+      luasnip = "(Snippet)",
+      buffer = "(Buffer)",
+    },
+    format = lspkind.cmp_format({
+      mode = 'symbol_text', -- show only symbol annotations
+      maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+
+      -- The function below will be called before any actual modifications from lspkind
+      -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
+      before = function (entry, vim_item)
+        return vim_item
+      end
+    })
+  }
+}

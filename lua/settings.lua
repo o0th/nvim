@@ -23,4 +23,5 @@ vim.api.nvim_set_keymap('n', '<Leader>o', ':Telescope find_files theme=get_ivy<C
 vim.api.nvim_set_keymap('n', '<Leader>]', ':bn<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>[', ':bp<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader><BS>', ':bd<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader><BS><BS>', ':bd!<CR>', { noremap = true })
 
