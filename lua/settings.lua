@@ -30,9 +30,19 @@ vim.cmd 'set nowritebackup'
 vim.cmd 'set noswapfile'
 
 -- Mapping
-vim.api.nvim_set_keymap('n', '<Leader>o', ':Telescope find_files theme=get_ivy<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files theme=get_ivy<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>g', ':Telescope git_files theme=get_ivy<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>]', ':bn<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>[', ':bp<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader><BS>', ':bd<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader><BS><BS>', ':bd!<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', 'i', '<Up>', { noremap = false })
+vim.api.nvim_set_keymap('n', 'j', '<Left>', { noremap = false })
+vim.api.nvim_set_keymap('n', 'k', '<Down>', { noremap = false })
+vim.api.nvim_set_keymap('v', 'i', '<Up>', { noremap = false })
+vim.api.nvim_set_keymap('v', 'j', '<Left>', { noremap = false })
+vim.api.nvim_set_keymap('v', 'k', '<Down>', { noremap = false })
+vim.api.nvim_set_keymap('n', 'h', 'i', { noremap = true })
+vim.api.nvim_set_keymap('n', 'H', 'I', { noremap = true })
+vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true })
 
