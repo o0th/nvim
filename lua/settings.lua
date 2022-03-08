@@ -29,6 +29,9 @@ vim.cmd 'set nowritebackup'
 -- Disable swap files
 vim.cmd 'set noswapfile'
 
+-- Set scrolloff
+vim.cmd 'set scrolloff=12'
+
 -- Set Leader
 vim.cmd 'let mapleader=" "'
 
@@ -57,5 +60,5 @@ vim.api.nvim_set_keymap('n', 'h', 'i', { noremap = true })
 vim.api.nvim_set_keymap('n', 'H', 'I', { noremap = true })
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true })
 
-vim.api.nvim_set_keymap('n', '<S-i>', ':m-2<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<S-k>', ':m+<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<S-k>', ':m+<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-i>', ':m-2<CR>', { noremap = true, silent = true })
