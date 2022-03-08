@@ -29,11 +29,18 @@ vim.cmd 'set nowritebackup'
 -- Disable swap files
 vim.cmd 'set noswapfile'
 
+-- Set Leader
+vim.cmd 'let mapleader=" "'
+
 -- Mapping
 vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files theme=get_ivy<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>g', ':Telescope git_files theme=get_ivy<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>]', ':bn<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>[', ':bp<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>p', ':bn<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>o', ':bp<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>q', ':q<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>wq', ':wq<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>qq', ':q!<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader><BS>', ':bd<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader><BS><BS>', ':bd!<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', 'i', '<Up>', { noremap = false })
