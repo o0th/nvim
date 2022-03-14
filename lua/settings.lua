@@ -35,6 +35,9 @@ vim.cmd 'set scrolloff=12'
 -- Set Leader
 vim.cmd 'let mapleader=" "'
 
+-- Use system clipboard
+vim.cmd 'set clipboard+=unnamedplus'
+
 --
 -- Mapping
 --
