@@ -1,4 +1,4 @@
 return {
-  colorscheme = "dracula"
+  colorscheme = "dracula",
 }
 
