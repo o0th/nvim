@@ -2,12 +2,6 @@ return {
   plugins = {
     { "Mofiqul/dracula.nvim" },
     {
-      "LhKipp/nvim-nu",
-      config = function()
-        require('nu').setup()
-      end,
-    },
-    {
       "github/copilot.vim",
       event = "VeryLazy",
       autoStart = true,
@@ -15,27 +9,6 @@ return {
         vim.g.copilot_assume_mapped = true
         vim.api.nvim_set_keymap("i", "<S-CR>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
       end,
-    },
-    {
-      "epwalsh/obsidian.nvim",
-      version = "*",
-      lazy = true,
-      ft = "markdown",
-      dependencies = {
-        "nvim-lua/plenary.nvim",
-      },
-      opts = {
-        workspaces = {
-          {
-            name = "personal",
-            path = "~/vaults/personal",
-          },
-          {
-            name = "work",
-            path = "~/vaults/work",
-          },
-        },
-      },
     },
     -- Default plugins configurations
     {
